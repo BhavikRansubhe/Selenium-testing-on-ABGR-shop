@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+    <test name="ValidEmailAndValidPassword">
+        <parameter name="no" value="1"></parameter>
+        <parameter name="Email" value="master"></parameter>
+        <parameter name="Password" value="1234"></parameter>
+        <classes>
+            <class name="ABGRFruitAndVeggiesShopTest">
+                <methods>
+                    <include name="adminLogin"/>
+                </methods>
+            </class> <!-- ABGRFruitAndVeggiesShopTest -->
+        </classes>
+    </test> <!-- ValidUsernameAndValidPassword -->
+
+    <test name="InvalidEmailAndValidPassword">
+        <parameter name="no" value="2"></parameter>
+        <parameter name="Email" value="admin"></parameter>
+        <parameter name="Password" value="1234"></parameter>
+        <classes>
+            <class name="ABGRFruitAndVeggiesShopTest">
+                <methods>
+                    <include name="adminLogin"/>
+                </methods>
+            </class> <!-- ABGRFruitAndVeggiesShopTest -->
+        </classes>
+    </test> <!-- InvalidUsernameAndInvalidPassword -->
+
+    <test name="ValidEmailAndInvalidPassword">
+        <parameter name="no" value="3"></parameter>
+        <parameter name="Email" value="master"></parameter>
+        <parameter name="Password" value="123"></parameter>
+        <classes>
+            <class name="ABGRFruitAndVeggiesShopTest">
+                <methods>
+                    <include name="adminLogin"/>
+                </methods>
+            </class> <!-- ABGRFruitAndVeggiesShopTest -->
+        </classes>
+    </test> <!-- ValidUsernameAndInvalidPassword -->
+
+    <test name="InvalidEmailAndInvalidPassword">
+        <parameter name="no" value="4"></parameter>
+        <parameter name="Email" value="admin"></parameter>
+        <parameter name="Password" value="123"></parameter>
+        <classes>
+            <class name="ABGRFruitAndVeggiesShopTest">
+                <methods>
+                    <include name="adminLogin"/>
+                </methods>
+            </class> <!-- ABGRFruitAndVeggiesShopTest -->
+        </classes>
+    </test> <!-- InvalidUsernameAndInvalidPassword -->
+</suite> <!-- Default Suite -->
